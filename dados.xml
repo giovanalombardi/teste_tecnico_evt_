@@ -1,0 +1,24 @@
+<Paciente>
+  <id>123</id>
+  <nome>João Pedro</nome>
+  <dataNascimento>2001-12-10</dataNascimento>
+  <sexo>masculino</sexo>
+  <telefone>(11) 98765-4321</telefone>
+  <email>joao.pedro@email.com</email>
+  <convenio>
+    <id>678</id>
+    <nome>SulAmerica</nome>
+    <dataInicio>2023-01-01</dataInicio>
+    <dataFim>2024-01-01</dataFim>
+  </convenio>
+</Paciente>
+<Consulta>
+  <id>456</id>
+  <pacienteId>123</pacienteId>
+  <medicoId>111</medicoId>
+  <dataConsulta>2023-12-01T14:30:00</dataConsulta>
+  <especialidade>Cardiologia</especialidade>
+  <status>Agendada</status>
+  <observacoes>Paciente relatou dores no peito.</observacoes>
+  <dataRegistro>2023-11-25T15:00:00</dataRegistro>
+</Consulta>

@@ -1,0 +1,63 @@
+openapi: 3.0.0
+info:
+  title: API de Pacientes e Consultas
+  version: 1.0.0
+paths:
+  /paciente:
+    get:
+      summary: Recuperar dados de um paciente
+      responses:
+        '200':
+          description: Sucesso
+          content:
+            application/json:
+              example:
+                id: "123"
+                nome: "João Pedro"
+                dataNascimento: "2001-12-10"
+                sexo: "masculino"
+                telefone: "(11) 98765-4321"
+                email: "joao.pedro@email.com"
+                convenio:
+                  id: "678"
+                  nome: "SulAmerica"
+                  dataInicio: "2023-01-01"
+                  dataFim: "2024-01-01"
+    post:
+      summary: Cadastrar um novo paciente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                nome:
+                  type: string
+                dataNascimento:
+                  type: string
+                  format: date
+                sexo:
+                  type: string
+                telefone:
+                  type: string
+                email:
+                  type: string
+                convenio:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    nome:
+                      type: string
+                    dataInicio:
+                      type: string
+                      format: date
+                    dataFim:
+                      type: string
+                      format: date
+      responses:
+        '201':
+          description: Paciente cadastrado com sucesso
